@@ -88,3 +88,41 @@ body {
     background-color: grey;
     border-radius: 0%;
 }
+
+.contenitore-rettangoli {
+    display: flex;
+    justify-content: center;
+}
+.rettangolo-rosso {
+    background-color: red;
+    width: 300px;
+    height: 200px;
+    margin: 0 10px;
+}
+.rettangolo-blu {
+    background-color: blue;
+    width: 300px;
+    height: 200px;
+    margin: 0 10px;
+}
+.rettangolo-verde {
+    background-color: green;
+    width: 300px;
+    height: 200px;
+    margin: 0 10px;
+}
+
+.rettangolo-rosso:hover {
+    background-color: gray;
+    border-radius: 0%;
+}
+
+.rettangolo-blu:hover {
+    background-color: gray;
+    border-radius: 0%;
+}
+
+.rettangolo-verde:hover {
+    background-color: gray;
+    border-radius: 0%;
+}
