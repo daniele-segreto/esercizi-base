@@ -1,0 +1,90 @@
+body {
+    background-color: beige;
+}
+
+.contenitore-quadrati {
+    display: flex;
+    justify-content: center;
+}
+
+.quadrato-rosso {
+    background-color: red;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
+    margin: 0 10px;
+}
+
+.quadrato-rosso:hover {
+    background-color: grey;
+}
+
+.quadrato-blu {
+    background-color: blue;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
+    margin: 0 10px;
+
+}
+
+.quadrato-blu:hover {
+    background-color: grey;
+}
+
+.quadrato-verde {
+    background-color: green;
+    width: 200px;
+    height: 200px;
+    margin: 0 10px;
+}
+
+.quadrato-verde:hover {
+    background-color: grey;
+}
+
+.contenitore-cerchi {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+}
+
+.cerchio-rosso {
+    background-color: red;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    margin: 0 10px;
+}
+
+.cerchio-rosso:hover {
+    background-color: grey;
+    border-radius: 0%;
+}
+
+.cerchio-blu {
+    background-color: blue;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    margin: 0 10px;
+}
+
+.cerchio-blu:hover {
+    background-color: grey;
+    border-radius: 0%;
+}
+
+.cerchio-verde {
+    background-color: green;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.cerchio-verde:hover {
+    background-color: grey;
+    border-radius: 0%;
+}
