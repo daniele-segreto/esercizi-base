@@ -1,0 +1,9 @@
+.titolo {
+    margin-top: 80px !important;
+}
+
+a {
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+}
