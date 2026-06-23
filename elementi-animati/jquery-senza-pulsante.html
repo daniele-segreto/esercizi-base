@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animazione Convergente Autonoma con jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- ATTENDERE 3 SECONDI DOPO LA SOVRAPPOSIZIONE DEI DUE ELEMENTI E FAR CARICARE IL SITO (un'altra pagina) -->
+    
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        /* Container principale con justify-content: space-between */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px; /* Limita la larghezza massima per una resa visiva ottimale */
+            padding: 0 20px;
+            position: relative; /* Necessario per il calcolo dei movimenti relativi */
+            height: 200px;
+        }
+
+        /* Stile comune per i due elementi */
+        .box {
+            width: 150px;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            position: relative; /* Permette a jQuery di animare la proprietà 'left' */
+        }
+
+        /* Elemento di Sinistra */
+        .box-left {
+            background: linear-gradient(135deg, #2193b0, #6dd5ed);
+        }
+
+        /* Elemento di Destra */
+        .box-right {
+            background: linear-gradient(135deg, #ee9ca7, #ffdde1);
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box box-left" id="element-left">Sinistra</div>
+        <div class="box box-right" id="element-right">Destra</div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            // L'animazione si avvia automaticamente al caricamento del DOM
+            
+            // 1. Calcolo dello spazio totale del container e della larghezza degli elementi
+            var $container = $('.container');
+            var containerWidth = $container.width();
+            var boxWidth = $('#element-left').outerWidth();
+
+            // 2. Calcolo del punto centrale esatto all'interno del container
+            var targetLeftPosition = (containerWidth / 2) - (boxWidth / 2);
+
+            // Per l'elemento di destra, partendo da 'space-between', la sua coordinata 'left' iniziale è (containerWidth - boxWidth).
+            var currentRightLeft = containerWidth - boxWidth;
+            var moveRightBy = targetLeftPosition - currentRightLeft;
+
+            // 3. Gestione preventiva dello z-index prima dell'inizio dell'animazione
+            $('#element-left').css('z-index', 10);
+            $('#element-right').css('z-index', 5);
+
+            // 4. Esecuzione delle animazioni in parallelo all'avvio
+            $('#element-left').animate({
+                left: targetLeftPosition + 'px'
+            }, 1500, 'swing');
+
+            $('#element-right').animate({
+                left: moveRightBy + 'px'
+            }, 1500, 'swing');
+        });
+    </script>
+
+</body>
+</html>
