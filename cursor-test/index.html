@@ -1,144 +1,159 @@
-    <!DOCTYPE html>
-    <html lang="it">
-    <head>
+<!doctype html>
+<html lang="it">
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Studio — Esperienze digitali</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
-    </head>
-    <body>
+  </head>
+  <body>
     <div class="grain" aria-hidden="true"></div>
     <div class="orb orb--a" aria-hidden="true"></div>
     <div class="orb orb--b" aria-hidden="true"></div>
 
     <header class="header">
-        <a class="logo" href="#">cursor<span>test</span></a>
-        <nav class="nav" id="nav">
+      <a class="logo" href="#">cursor<span>test</span></a>
+      <nav class="nav" id="nav">
         <a href="#work">Lavori</a>
         <a href="#services">Servizi</a>
         <a href="#contact">Contatti</a>
-        </nav>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Apri menu">
+      </nav>
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="nav"
+        aria-label="Apri menu"
+      >
         <span></span><span></span><span></span>
-        </button>
+      </button>
     </header>
 
     <main>
-        <section class="hero">
+      <section class="hero">
         <p class="hero__eyebrow reveal" data-reveal>Progetto locale</p>
         <h1 class="hero__title reveal" data-reveal>
-            Idee che <em>si muovono</em> sullo schermo
+          Idee che <em>si muovono</em> sullo schermo
         </h1>
         <p class="hero__lead reveal" data-reveal>
-            Un layout moderno, tipografia curata e micro-interazioni leggere — tutto servito dalla tua cartella <code>css/</code> e <code>js/</code>.
+          Un layout moderno, tipografia curata e micro-interazioni leggere —
+          tutto servito dalla tua cartella <code>css/</code> e <code>js/</code>.
         </p>
         <div class="hero__actions reveal" data-reveal>
-            <a class="btn btn--primary" href="#work">Scopri il concept</a>
-            <a class="btn btn--ghost" href="#contact">Parliamone</a>
+          <a class="btn btn--primary" href="#work">Scopri il concept</a>
+          <a class="btn btn--ghost" href="#contact">Parliamone</a>
         </div>
         <div class="hero__stats reveal" data-reveal>
-            <div class="stat">
+          <div class="stat">
             <span class="stat__value" data-count="12">0</span>
             <span class="stat__label">Sezioni animate</span>
-            </div>
-            <div class="stat">
+          </div>
+          <div class="stat">
             <span class="stat__value" data-count="100">0</span>
             <span class="stat__label">% cura nei dettagli</span>
-            </div>
-            <div class="stat">
+          </div>
+          <div class="stat">
             <span class="stat__value" data-count="3">0</span>
             <span class="stat__label">File principali</span>
-            </div>
+          </div>
         </div>
-        </section>
+      </section>
 
-        <section class="marquee" aria-hidden="true">
+      <section class="marquee" aria-hidden="true">
         <div class="marquee__track">
-            <span>Design system-ready</span>
-            <span>Motion leggero</span>
-            <span>Accessibilità di base</span>
-            <span>Responsive</span>
-            <span>Design system-ready</span>
-            <span>Motion leggero</span>
-            <span>Accessibilità di base</span>
-            <span>Responsive</span>
+          <span>Design system-ready</span>
+          <span>Motion leggero</span>
+          <span>Accessibilità di base</span>
+          <span>Responsive</span>
+          <span>Design system-ready</span>
+          <span>Motion leggero</span>
+          <span>Accessibilità di base</span>
+          <span>Responsive</span>
         </div>
-        </section>
+      </section>
 
-        <section class="section" id="work">
+      <section class="section" id="work">
         <div class="section__head reveal" data-reveal>
-            <h2>Lavori in evidenza</h2>
-            <p>Card con hover fluido e profondità soft.</p>
+          <h2>Lavori in evidenza</h2>
+          <p>Card con hover fluido e profondità soft.</p>
         </div>
         <div class="grid">
-            <article class="card reveal" data-reveal>
+          <article class="card reveal" data-reveal>
             <div class="card__visual card__visual--1"></div>
             <h3>Brand pulse</h3>
             <p>Identità digitale e landing ad alte prestazioni.</p>
             <span class="card__tag">UI</span>
-            </article>
-            <article class="card reveal" data-reveal>
+          </article>
+          <article class="card reveal" data-reveal>
             <div class="card__visual card__visual--2"></div>
             <h3>Flow analytics</h3>
             <p>Dashboard con dati leggibili e gerarchia chiara.</p>
             <span class="card__tag">Product</span>
-            </article>
-            <article class="card reveal" data-reveal>
+          </article>
+          <article class="card reveal" data-reveal>
             <div class="card__visual card__visual--3"></div>
             <h3>Nova mobile</h3>
             <p>Esperienza touch-first con gesture naturali.</p>
             <span class="card__tag">App</span>
-            </article>
+          </article>
         </div>
-        </section>
+      </section>
 
-        <section class="section section--split" id="services">
+      <section class="section section--split" id="services">
         <div class="section__head reveal" data-reveal>
-            <h2>Servizi</h2>
-            <p>Tre pilastri per progetti che vogliono distinguersi.</p>
+          <h2>Servizi</h2>
+          <p>Tre pilastri per progetti che vogliono distinguersi.</p>
         </div>
         <ul class="services">
-            <li class="services__item reveal" data-reveal>
+          <li class="services__item reveal" data-reveal>
             <span class="services__num">01</span>
             <div>
-                <strong>Strategia &amp; UX</strong>
-                <p>Wireframe, journey e contenuti che guidano l’utente.</p>
+              <strong>Strategia &amp; UX</strong>
+              <p>Wireframe, journey e contenuti che guidano l’utente.</p>
             </div>
-            </li>
-            <li class="services__item reveal" data-reveal>
+          </li>
+          <li class="services__item reveal" data-reveal>
             <span class="services__num">02</span>
             <div>
-                <strong>UI &amp; motion</strong>
-                <p>Componenti coerenti, transizioni discrete, ritmo visivo.</p>
+              <strong>UI &amp; motion</strong>
+              <p>Componenti coerenti, transizioni discrete, ritmo visivo.</p>
             </div>
-            </li>
-            <li class="services__item reveal" data-reveal>
+          </li>
+          <li class="services__item reveal" data-reveal>
             <span class="services__num">03</span>
             <div>
-                <strong>Implementazione</strong>
-                <p>HTML semantico, CSS modulare, JS progressive enhancement.</p>
+              <strong>Implementazione</strong>
+              <p>HTML semantico, CSS modulare, JS progressive enhancement.</p>
             </div>
-            </li>
+          </li>
         </ul>
-        </section>
+      </section>
 
-        <section class="cta" id="contact">
+      <section class="cta" id="contact">
         <div class="cta__inner reveal" data-reveal>
-            <h2>Pronto a far vibrare il tuo prossimo sito?</h2>
-            <p>Modifica testi e colori in <code>css/style.css</code> e comportamenti in <code>js/script.js</code>.</p>
-            <a class="btn btn--primary btn--lg" href="mailto:hello@example.com">Scrivimi</a>
+          <h2>Pronto a far vibrare il tuo prossimo sito?</h2>
+          <p>
+            Modifica testi e colori in <code>css/style.css</code> e
+            comportamenti in <code>js/script.js</code>.
+          </p>
+          <a class="btn btn--primary btn--lg" href="mailto:hello@example.com"
+            >Scrivimi</a
+          >
         </div>
-        </section>
+      </section>
     </main>
 
     <footer class="footer">
-        <span>© <span id="year"></span> cursor-test</span>
-        <span class="footer__hint">Apri <kbd>index.html</kbd> nel browser</span>
+      <span>© <span id="year"></span> cursor-test</span>
+      <span class="footer__hint">Apri <kbd>index.html</kbd> nel browser</span>
     </footer>
 
     <script src="js/script.js"></script>
-    </body>
-    </html>
+  </body>
+</html>
