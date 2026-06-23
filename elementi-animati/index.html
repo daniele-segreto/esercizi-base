@@ -3,103 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animazione Sovrapposizione Centrale Corretta - Dr. Gem</title>
+    <title>Home</title>
     <style>
-        /* Reset di base e centratura verticale del container */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #1a1d21;
-            color: #fff;
-            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            height: 100vh;
             display: flex;
-            align-items: center;
             justify-content: center;
-            overflow-x: hidden;
-        }
-
-        /* Container principale con allineamento iniziale richiesto */
-        .anim-container {
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-            max-width: 1200px;
-            padding: 0 50px;
-            position: relative;
-        }
-
-        /* Stile comune per gli elementi */
-        .box {
-            width: 160px;
-            height: 160px;
-            display: flex;
             align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            border-radius: 12px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
-            
-            /* Cruciale per far funzionare lo z-index */
-            position: relative; 
-            
-            /* Origine della trasformazione nell'angolo in alto a sinistra */
-            transform-origin: top left;
         }
-
-        /* Classe per l'elemento di SINISTRA */
-        .slide-from-left {
-            background: linear-gradient(135deg, #007bff, #00d2ff);
-            /* --- MODIFICA --- */
-            /* Z-index SUPERIORE per finire SOPRA l'altro elemento */
-            z-index: 20; 
-            animation: stopAtCenterLeft 1.8s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-        }
-
-        /* Classe per l'elemento di DESTRA */
-        .slide-from-right {
-            background: linear-gradient(135deg, #ff416c, #ff4b2b);
-            /* --- MODIFICA --- */
-            /* Z-index INFERIORE */
-            z-index: 10; 
-            animation: stopAtCenterRight 1.8s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-        }
-
-        /* --- ANIMAZIONI KEYFRAMES --- */
-        
-        /* Spostamento da sinistra e stop esatto al centro */
-        @keyframes stopAtCenterLeft {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                /* Si sposta al centro esatto (50vw) */
-                transform: translateX(50vw);
-            }
-        }
-
-        /* Spostamento da destra e stop esatto al centro */
-        @keyframes stopAtCenterRight {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                /* Si sposta al centro esatto, compensando il padding (calc(-50vw + 50px)) */
-                transform: translateX(calc(-50vw + 50px));
-            }
+        h1 {
+            color: #333;
+            font-size: 2.5rem;
         }
     </style>
 </head>
 <body>
-
-    <div class="anim-container">
-        <div class="box slide-from-left">Sinistra</div>
-        <div class="box slide-from-right">Destra</div>
-    </div>
-
+    <h1>Benvenuto sul nostro sito</h1>
 </body>
 </html>
