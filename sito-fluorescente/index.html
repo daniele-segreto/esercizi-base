@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Studio fotografico — luce, colore e immagini che restano.">
+    <title>Lumen Fluo — Fotografia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Skip: visibile solo a focus (Tab); target = id del <main> per accessibilità. -->
+    <a class="skip-link" href="#contenuto-principale">Vai al contenuto</a>
+
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a class="logo" href="#">Lumen<span class="logo__accent">Fluo</span></a>
+            <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Apri menu">
+                <span class="nav-toggle__bar" aria-hidden="true"></span>
+                <span class="nav-toggle__bar" aria-hidden="true"></span>
+                <span class="nav-toggle__bar" aria-hidden="true"></span>
+            </button>
+            <nav class="site-nav" id="siteNav" aria-label="Principale">
+                <ul class="site-nav__list">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#gallery">Galleria</a></li>
+                    <li><a href="#about">Chi siamo</a></li>
+                </ul>
+            </nav>
+        </div>+
+    </header>
+
+    <main id="contenuto-principale">
+        <section id="home" class="hero">
+            <div class="hero__glow hero__glow--1" aria-hidden="true"></div>
+            <div class="hero__glow hero__glow--2" aria-hidden="true"></div>
+            <div class="hero__inner">
+                <p class="hero__eyebrow">Studio fotografico</p>
+                <h1 class="hero__title">Luce che <span class="text-glow">resta</span></h1>
+                <p class="hero__lead">Ritratti, eventi e still life con un’estetica netta e colori che vibrano sul buio.</p>
+                <div class="hero__actions">
+                    <!-- Mozzafiato / Reset: jQuery in js/script.js (classe body + coriandoli). -->
+                    <button type="button" class="btn btn--primary" id="mozzafiatoButton">Mozzafiato</button>
+                    <button type="button" class="btn btn--ghost" id="resetButton">Reset</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="section gallery">
+            <div class="section__head">
+                <h2 class="section__title">Galleria</h2>
+                <p class="section__subtitle">Anteprima dello stile — immagini da rete (placeholder).</p>
+            </div>
+            <div class="gallery__grid">
+                <!-- data-modal = id del <dialog>; showModal() nativo chiamato da jQuery in script.js -->
+                <button type="button" class="gallery__card" data-modal="modal-1" aria-haspopup="dialog">
+                    <img src="https://picsum.photos/seed/neon1/800/1000" alt="Composizione astratta in toni caldi" width="400" height="500" loading="lazy">
+                    <span class="gallery__card-label">Warm grid</span>
+                </button>
+                <button type="button" class="gallery__card" data-modal="modal-2" aria-haspopup="dialog">
+                    <img src="https://picsum.photos/seed/neon2/800/1000" alt="Dettaglio urbano notturno" width="400" height="500" loading="lazy">
+                    <span class="gallery__card-label">Night pulse</span>
+                </button>
+                <button type="button" class="gallery__card" data-modal="modal-3" aria-haspopup="dialog">
+                    <img src="https://picsum.photos/seed/neon3/800/1000" alt="Superficie riflettente e luci" width="400" height="500" loading="lazy">
+                    <span class="gallery__card-label">Glass line</span>
+                </button>
+            </div>
+        </section>
+
+        <section id="about" class="section about">
+            <div class="about__panel">
+                <h2 class="section__title">Chi siamo</h2>
+                <p>Siamo un piccolo studio che unisce tecnica e sensibilità cromatica: meno rumore visivo, più contrasto e intenzione. Lavoriamo su commissione per privati e brand.</p>
+                <ul class="about__list">
+                    <li>Ritratti e lookbook</li>
+                    <li>Eventi e reportage creativo</li>
+                    <li>Still life e product</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© <span id="year"></span> Lumen Fluo — Esercizio HTML/CSS</p>
+    </footer>
+
+    <!-- Lightbox native: stesso id usato da data-modal sulle card galleria. -->
+    <dialog class="lightbox" id="modal-1" aria-labelledby="modal-1-title">
+        <div class="lightbox__inner">
+            <button type="button" class="lightbox__close" data-close-modal aria-label="Chiudi">×</button>
+            <h3 class="visually-hidden" id="modal-1-title">Warm grid</h3>
+            <img src="https://picsum.photos/seed/neon1/1200/1500" alt="" width="800" height="1000">
+        </div>
+    </dialog>
+    <dialog class="lightbox" id="modal-2" aria-labelledby="modal-2-title">
+        <div class="lightbox__inner">
+            <button type="button" class="lightbox__close" data-close-modal aria-label="Chiudi">×</button>
+            <h3 class="visually-hidden" id="modal-2-title">Night pulse</h3>
+            <img src="https://picsum.photos/seed/neon2/1200/1500" alt="" width="800" height="1000">
+        </div>
+    </dialog>
+    <dialog class="lightbox" id="modal-3" aria-labelledby="modal-3-title">
+        <div class="lightbox__inner">
+            <button type="button" class="lightbox__close" data-close-modal aria-label="Chiudi">×</button>
+            <h3 class="visually-hidden" id="modal-3-title">Glass line</h3>
+            <img src="https://picsum.photos/seed/neon3/1200/1500" alt="" width="800" height="1000">
+        </div>
+    </dialog>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
